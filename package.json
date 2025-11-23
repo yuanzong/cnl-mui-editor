@@ -7,6 +7,9 @@
   "sideEffects": false,
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuanzong/cnl-mui-editor.git"
