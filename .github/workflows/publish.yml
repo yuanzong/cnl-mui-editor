@@ -12,6 +12,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
+      packages: none   # ← prevents NODE_AUTH_TOKEN from being set
 
     steps:
       - name: Checkout repository
