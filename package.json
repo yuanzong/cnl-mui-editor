@@ -13,7 +13,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "prebuild": "rm -rf dist",
