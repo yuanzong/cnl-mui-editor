@@ -1,0 +1,47 @@
+{
+  "name": "cnl-mui-editor",
+  "version": "1.8.0",
+  "description": "Rich text edtior built on tiptap2",
+  "author": "Yuanzong Qiu <yz@createandlearn.us>",
+  "license": "MIT",
+  "sideEffects": false,
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://bitbucket.org/createlearn/cl-libs",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup --config",
+    "lint": "npx biome lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@tiptap/core": "^3.11.0",
+    "@tiptap/extension-image": "^3.11.0",
+    "@tiptap/pm": "^3.11.0",
+    "@tiptap/react": "^3.11.0",
+    "@tiptap/starter-kit": "^3.11.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.6",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/react": "^19.2.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rollup": "^4.53.3"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "^7.0.0",
+    "@mui/material": "^7.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
