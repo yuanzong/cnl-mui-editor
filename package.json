@@ -19,6 +19,7 @@
     "typecheck": "tsc --noEmit"
   },
   "publishConfig": {
+    "provenance": true,
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
