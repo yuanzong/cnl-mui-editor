@@ -23,6 +23,12 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+          always-auth: false   # ← PREVENTS NODE_AUTH_TOKEN
+
+      - name: Remove all injected npm auth
+        run: |
+          rm -f ~/.npmrc
+          rm -f $NPM_CONFIG_USERCONFIG
 
       - name: Install dependencies
         run: npm ci
