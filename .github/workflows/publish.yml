@@ -12,7 +12,6 @@ jobs:
     permissions:
       id-token: write
       contents: read
-      packages: none   # ← prevents NODE_AUTH_TOKEN from being set
 
     steps:
       - name: Checkout repository
@@ -23,15 +22,11 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          always-auth: false   # ← PREVENTS NODE_AUTH_TOKEN
 
-      - name: Remove all injected npm auth
-        run: |
-          rm -f ~/.npmrc
-          rm -f $NPM_CONFIG_USERCONFIG
+      - run: npm install -g npm@latest
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build package
         run: npm run build
