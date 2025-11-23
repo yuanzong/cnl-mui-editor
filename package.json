@@ -22,9 +22,6 @@
     "lint": "npx biome lint",
     "typecheck": "tsc --noEmit"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "@floating-ui/dom": "^1.7.4",
     "@tiptap/core": "^3.11.0",
